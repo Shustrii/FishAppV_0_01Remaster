@@ -21,6 +21,9 @@
     <c:url var="deleteButton" value="/deleteFish">
         <c:param name="fishId" value="${fishes.id}"/>
     </c:url>
+        <c:url var="descriptionButton" value="/description">
+            <c:param name="fishId" value="${fishes.id}"/>
+        </c:url>
 
     <td>${fishes.name}</td>
         <td>${fishes.typeOfFish}</td>
@@ -29,6 +32,9 @@
         onclick="window.location.href='${updateButton}'">
         <input type="button" value="Delete"
         onclick="window.location.href='${deleteButton}'">
+        <input type="button" value="See more"
+               onclick="window.location.href='${descriptionButton}'">
+
     </td>
 </tr>
 

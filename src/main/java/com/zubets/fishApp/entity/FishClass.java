@@ -14,15 +14,18 @@ public class FishClass {
     private String name;
     @Column(name = "typeOfFish")
     private String typeOfFish;
+    @Column(name = "description")
+    private String description;
 
     public FishClass(){
 
     }
 
-    public FishClass(int id, String name, String typeOfFish) {
+    public FishClass(int id, String name, String typeOfFish, String description) {
         this.id = id;
         this.name = name;
-       // this.typeOfFish = typeOfFish;
+        this.typeOfFish = typeOfFish;
+        this.description = description;
     }
 
     public int getId() {
@@ -49,5 +52,11 @@ public class FishClass {
         this.typeOfFish = typeOfFish;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

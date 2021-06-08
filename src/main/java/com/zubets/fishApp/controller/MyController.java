@@ -33,7 +33,7 @@ public class MyController {
         model.addAttribute("fishClass", fishClass);
         return "fish-info";
     }
-    @RequestMapping("saveFish")
+    @RequestMapping("/saveFish")
     public String saveFish(@ModelAttribute("fishClass") FishClass fishClass){
         fishService.saveFish(fishClass);
             return "redirect:/";
@@ -52,5 +52,11 @@ public class MyController {
         fishService.deleteFish(id);
         return"redirect:/";
     }
+    @RequestMapping("/description")
+    public String description(@RequestParam("fishId") int id, Model model){
+        FishClass fishClass = fishService.getFish(id);
+        model.addAttribute("fishClass", fishClass);
 
+        return "description-fish";
+    }
 }

@@ -11,6 +11,8 @@
     <br><br>
     Type Of Fish <form:input path="typeOfFish"/>
 <br><br>
+    Description<form:textarea path="description"/>
+    <br>
     <input type="submit" value="OK">
 </form:form>
 </body>
